@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SouthbankLT.ttf">
+            <string>SouthbankLT</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAO_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SEd-5o-7fm">
+                                <rect key="frame" x="87" y="202" width="240" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Icn-Cw-Ux2"/>
+                                    <constraint firstAttribute="height" constant="207" id="mgw-wB-A0L"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knp-9z-6Ho">
+                                <rect key="frame" x="78" y="483" width="258" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CDg-sE-0tC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SouthbankLT" family="Southbank LT" pointSize="28"/>
+                                <state key="normal" title="Let's Go!">
+                                    <color key="titleColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToStory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5S6-S6-hlo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Knp-9z-6Ho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="OBE-8H-JWn"/>
+                            <constraint firstItem="SEd-5o-7fm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="Pf4-LO-IdI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Knp-9z-6Ho" secondAttribute="bottom" constant="339" id="PsA-pm-m06"/>
+                            <constraint firstItem="Knp-9z-6Ho" firstAttribute="top" secondItem="SEd-5o-7fm" secondAttribute="bottom" constant="74" id="TO3-WL-umN"/>
+                            <constraint firstItem="Knp-9z-6Ho" firstAttribute="top" secondItem="SEd-5o-7fm" secondAttribute="bottom" constant="74" id="cc7-Zu-dei"/>
+                            <constraint firstItem="SEd-5o-7fm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ciU-Xd-iRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEd-5o-7fm" secondAttribute="trailing" constant="87" id="eK4-ey-Wxu"/>
+                            <constraint firstItem="SEd-5o-7fm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="gQj-uC-bm0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEd-5o-7fm" secondAttribute="trailing" constant="87" id="jc6-Gb-Was"/>
+                            <constraint firstItem="Knp-9z-6Ho" firstAttribute="top" secondItem="SEd-5o-7fm" secondAttribute="bottom" constant="74" id="kRK-Qd-hXd"/>
+                            <constraint firstItem="SEd-5o-7fm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="maw-DZ-e7G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Knp-9z-6Ho" secondAttribute="trailing" constant="78" id="rhC-VN-mma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnGo" destination="Knp-9z-6Ho" id="3DF-Iq-bhJ"/>
+                        <segue destination="bv4-Yd-axA" kind="show" identifier="toStoryFromRoot" id="bU3-ov-LfH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="Sbh-09-aob">
+            <objects>
+                <viewController id="bv4-Yd-axA" customClass="StoryViewController" customModule="MAO_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Nh-7k-zvE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Story" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-XB-ege">
+                                <rect key="frame" x="0.0" y="53" width="414" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="6tO-Kd-FMa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SouthbankLT" family="Southbank LT" pointSize="38"/>
+                                <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x3h-Ox-ne0">
+                                <rect key="frame" x="20" y="122" width="382" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x3h-Ox-ne0" firstAttribute="top" secondItem="X9i-XB-ege" secondAttribute="bottom" constant="8" id="AJI-cp-2P6"/>
+                            <constraint firstItem="X9i-XB-ege" firstAttribute="leading" secondItem="HVd-mr-5it" secondAttribute="leading" id="Fri-Wf-wht"/>
+                            <constraint firstItem="x3h-Ox-ne0" firstAttribute="leading" secondItem="HVd-mr-5it" secondAttribute="leading" constant="20" id="GrF-DV-f6F"/>
+                            <constraint firstItem="HVd-mr-5it" firstAttribute="bottom" secondItem="x3h-Ox-ne0" secondAttribute="bottom" constant="167" id="JwA-hR-5iJ"/>
+                            <constraint firstItem="HVd-mr-5it" firstAttribute="trailing" secondItem="x3h-Ox-ne0" secondAttribute="trailing" constant="12" id="c3X-DA-abH"/>
+                            <constraint firstItem="X9i-XB-ege" firstAttribute="top" secondItem="HVd-mr-5it" secondAttribute="top" constant="9" id="iDD-jC-agy"/>
+                            <constraint firstItem="X9i-XB-ege" firstAttribute="trailing" secondItem="HVd-mr-5it" secondAttribute="trailing" id="wfz-Kv-R3o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HVd-mr-5it"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atQ-QK-Id2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="100" height="102.5"/>
+    </resources>
+</document>

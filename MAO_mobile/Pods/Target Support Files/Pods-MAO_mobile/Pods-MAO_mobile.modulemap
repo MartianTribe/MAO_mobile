@@ -1,0 +1,6 @@
+framework module Pods_MAO_mobile {
+  umbrella header "Pods-MAO_mobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
